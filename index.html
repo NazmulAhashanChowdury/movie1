@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NN Movie</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <i class='bx bxs-movie-play'></i> Movie
+        </a>
+        <div class="menu-icon bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="#home" class="home-active">Home</a></li>
+            <li><a href="#movie">Movie</a></li>
+            <li><a href="#coming">Coming</a></li>
+            <li><a href="#news">News</a></li>
+        </ul>
+        <a href="#" class="btn">Sign In</a>
+    </header>
+    <!-- Home -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            
+            <div class="swiper-slide container">
+                <img src="img/home3.jpg" alt="">
+                <div class="home-text">
+                    <span>Marvel Universe</span>
+                    <h1>Nazmul: Let There<br>Be Carnage</h1>
+                    <a href="#" class="btn">Book Now</a>
+                    <a href="#" class="play">
+                        <i class='bx bx-play'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="img/home2.jpg" alt="">
+                <div class="home-text">
+                    <span>Marvel Universe</span>
+                    <h1>Avengers:<br>Infinity War</h1>
+                    <a href="#" class="btn">Book Now</a>
+                    <a href="#" class="play">
+                        <i class='bx bx-play'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="img/home1.jpg" alt="">
+                <div class="home-text">
+                    <span>Marvel Universe</span>
+                    <h1>Avengers:<br>Endgame</h1>
+                    <a href="#" class="btn">Book Now</a>
+                    <a href="#" class="play">
+                        <i class='bx bx-play'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="img/358138249_1341754293350933_4047959712683820717_n.jpg" alt="">
+                <div class="home-text">
+                    <span>Marvel Universe</span>
+                    <h1>Nazmul: Let There<br>Be Carnage</h1>
+                    <a href="#" class="btn">Book Now</a>
+                    <a href="#" class="play">
+                        <i class='bx bx-play'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Swiper
+            const swiper = new Swiper('.home.swiper', {
+                loop: true, // Enable continuous loop
+                autoplay: {
+                    delay: 3000, // Delay between slides in milliseconds (3 seconds)
+                },
+                pagination: {
+                    el: '.swiper-pagination', // Pagination container (this will be automatically created)
+                },
+            });
+
+            // Mobile menu functionality
+            const menuIcon = document.getElementById('menu-icon');
+            const navbar = document.querySelector('.navbar');
+
+            menuIcon.addEventListener('click', function () {
+                navbar.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
